@@ -1,0 +1,346 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PDC Base\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-24 13:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: config/metaboxes.php:7
+msgid "Data"
+msgstr ""
+
+#: config/metaboxes.php:17
+msgid "General"
+msgstr ""
+
+#: config/metaboxes.php:20
+msgid "Title alternative"
+msgstr ""
+
+#: config/metaboxes.php:21
+msgid "Use this option if you want to use an alternative title"
+msgstr ""
+
+#: config/metaboxes.php:26
+msgid "Synonyms"
+msgstr ""
+
+#: config/metaboxes.php:27
+msgid ""
+"Use this option to add an comma separated list of synonyms or related terms"
+msgstr ""
+
+#: config/metaboxes.php:32 config/metaboxes.php:49
+msgid "Active"
+msgstr ""
+
+#: config/metaboxes.php:33
+msgid "Is this product active yes/no"
+msgstr ""
+
+#: config/metaboxes.php:46
+msgid "Make an appointment"
+msgstr ""
+
+#: config/metaboxes.php:50
+msgid "Is an appointment obligatory for this product yes/no?"
+msgstr ""
+
+#: config/metaboxes.php:60
+msgid "Appointment button title"
+msgstr ""
+
+#: config/metaboxes.php:61
+msgid "Leave empty for default value usage"
+msgstr ""
+
+#: config/metaboxes.php:66
+msgid "Appointment URL"
+msgstr ""
+
+#: config/metaboxes.php:67
+msgid ""
+"Use this field to get a specific URL for the appointment button. URL "
+"including http(s)://"
+msgstr ""
+
+#: config/metaboxes.php:72
+msgid "Appointment meta"
+msgstr ""
+
+#: config/metaboxes.php:73
+msgid ""
+"Use this field if the appointment method leverages an special data attribute "
+"like eg. GravityForms-id (currently not in use)"
+msgstr ""
+
+#: config/metaboxes.php:81
+msgid "Links"
+msgstr ""
+
+#: config/metaboxes.php:92
+msgid "Link title"
+msgstr ""
+
+#: config/metaboxes.php:93 config/metaboxes.php:120 config/metaboxes.php:147
+msgid "Use the title to replace the URL"
+msgstr ""
+
+#: config/metaboxes.php:98
+msgid "Link URL"
+msgstr ""
+
+#: config/metaboxes.php:99 config/metaboxes.php:126 config/metaboxes.php:153
+#: config/settings.php:14
+msgid "URL including http(s)://"
+msgstr ""
+
+#: config/metaboxes.php:108
+msgid "Downloads"
+msgstr ""
+
+#: config/metaboxes.php:119
+msgid "Download title"
+msgstr ""
+
+#: config/metaboxes.php:125
+msgid "Download URL"
+msgstr ""
+
+#: config/metaboxes.php:135
+msgid "Forms"
+msgstr ""
+
+#: config/metaboxes.php:146
+msgid "Form title"
+msgstr ""
+
+#: config/metaboxes.php:152
+msgid "Form URL"
+msgstr ""
+
+#: config/metaboxes.php:162
+msgid "Government standards"
+msgstr ""
+
+#: config/metaboxes.php:165
+msgid "UPL name"
+msgstr ""
+
+#: config/metaboxes.php:166
+msgid "Example: aanduiding naamgebruik"
+msgstr ""
+
+#: config/metaboxes.php:171
+msgid "UPL resource"
+msgstr ""
+
+#: config/metaboxes.php:172
+msgid ""
+"Example: http://standaarden.overheid.nl/owms/tersm/aanduiding_naamgebruik"
+msgstr ""
+
+#: config/metaboxes.php:180
+msgid "Other"
+msgstr ""
+
+#: config/metaboxes.php:183
+msgid "Notes"
+msgstr ""
+
+#: config/metaboxes.php:184
+msgid "(the law, authority, local regulations, etc.)"
+msgstr ""
+
+#: config/p2p_connections.php:9
+msgctxt "P2P titel"
+msgid "PDC item"
+msgstr ""
+
+#: config/p2p_connections.php:14
+msgctxt "P2P titel"
+msgid "PDC theme"
+msgstr ""
+
+#: config/p2p_connections.php:19
+msgctxt "P2P titel"
+msgid "PDC subtheme"
+msgstr ""
+
+#: config/p2p_connections.php:24
+msgctxt "P2P titel"
+msgid "PDC owner"
+msgstr ""
+
+#: config/posttypes.php:26
+msgctxt "Posttype definition"
+msgid "PDC item"
+msgstr ""
+
+#: config/posttypes.php:27
+msgctxt "Posttype definition"
+msgid "PDC items"
+msgstr ""
+
+#: config/posttypes.php:48
+msgctxt "Posttype definition"
+msgid "PDC theme"
+msgstr ""
+
+#: config/posttypes.php:49
+msgctxt "Posttype definition"
+msgid "PDC themes"
+msgstr ""
+
+#: config/posttypes.php:70
+msgctxt "Posttype definition"
+msgid "PDC subtheme"
+msgstr ""
+
+#: config/posttypes.php:71
+msgctxt "Posttype definition"
+msgid "PDC subthemes"
+msgstr ""
+
+#: config/settings.php:7
+msgctxt "PDC instellingen subpagina"
+msgid "Portal"
+msgstr ""
+
+#: config/settings.php:13
+msgid "Portal URL"
+msgstr ""
+
+#: config/settings.php:19
+msgid "Portal PDC item slug"
+msgstr ""
+
+#: config/settings.php:20
+msgid "URL for PDC items in the portal, eg \"onderwerp\""
+msgstr ""
+
+#: config/settings_pages.php:9
+msgid "PDC settings"
+msgstr ""
+
+#: config/settings_pages.php:11
+msgctxt "PDC settings subpage"
+msgid "Base"
+msgstr ""
+
+#: config/settings_pages.php:14
+msgctxt "PDC settings subpage"
+msgid "Submit"
+msgstr ""
+
+#: config/settings_pages.php:16
+msgctxt "PDC settings tab"
+msgid "General"
+msgstr ""
+
+#: config/taxonomies.php:22
+msgctxt "Taxonomy definition"
+msgid "Audience"
+msgstr ""
+
+#: config/taxonomies.php:23
+msgctxt "Taxonomy definition"
+msgid "Audiences"
+msgstr ""
+
+#: config/taxonomies.php:43
+msgctxt "Taxonomy definition"
+msgid "Type"
+msgstr ""
+
+#: config/taxonomies.php:44
+msgctxt "Taxonomy definition"
+msgid "Types"
+msgstr ""
+
+#: config/taxonomies.php:64
+msgctxt "Taxonomy definition"
+msgid "Aspect"
+msgstr ""
+
+#: config/taxonomies.php:65
+msgctxt "Taxonomy definition"
+msgid "Aspects"
+msgstr ""
+
+#: config/taxonomies.php:84
+msgctxt "Taxonomy definition"
+msgid "Usage"
+msgstr ""
+
+#: config/taxonomies.php:85
+msgctxt "Taxonomy definition"
+msgid "Usages"
+msgstr ""
+
+#: config/taxonomies.php:105
+msgctxt "Taxonomy definition"
+msgid "Owner"
+msgstr ""
+
+#: config/taxonomies.php:106
+msgctxt "Taxonomy definition"
+msgid "Owners"
+msgstr ""
+
+#: src/Core/Admin/InterfaceServiceProvider.php:35
+msgid "View PDC item in portal"
+msgstr ""
+
+#: src/Core/Admin/InterfaceServiceProvider.php:45
+msgctxt "preview button text"
+msgid "View in Portal"
+msgstr ""
+
+#. %s: post title
+#: src/Core/Admin/InterfaceServiceProvider.php:69
+#, php-format
+msgid "View &#8220;%s&#8221;"
+msgstr ""
+
+#: src/Core/Admin/InterfaceServiceProvider.php:70
+msgctxt "Preview text in PDC list"
+msgid "View in Portal"
+msgstr ""
+
+#: src/Core/PostType/PostTypes/PdcItemModel.php:67
+#, php-format
+msgid "p2p_key \"%s\" does not exist"
+msgstr ""
+
+#. Name of the plugin
+msgid "PDC Base"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Plugin to act as foundation for other PDC related content plugins. This "
+"plugin implements actions to allow for other plugins to add and/or change "
+"Custom Posttypes, Metaboxes, Taxonomies, en Posts 2 posts relations."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://www.openwebconcept.nl/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Edwin Siebel, Ruud Laan"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.yarddigital.nl/"
+msgstr ""
