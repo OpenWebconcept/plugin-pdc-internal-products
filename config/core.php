@@ -9,12 +9,13 @@ return [
         /**
          * Global providers.
          */
+        OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider::class,
+        OWC\PDC\InternalProducts\Taxonomy\TaxonomyServiceProvider::class,
 
         /**
          * Providers specific to the admin.
          */
         'admin' => [
-
         ]
 
     ],
