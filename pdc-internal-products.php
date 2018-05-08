@@ -1,19 +1,19 @@
 <?php
 /**
- * Plugin Name:       PDC Interne Producten
+ * Plugin Name:       PDC Internal Products
  * Plugin URI:        https://www.openwebconcept.nl/
- * Description:       Splitst de PDC items op voor intern en/of extern gebruik
+ * Description:       Splits the PDC items for internal and/or external use
  * Version:           1.0.0
  * Author:            Melvin Koopmans
  * Author URI:        https://www.yarddigital.nl/
  * License:           GPL-3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:       pdc-interne-producten
+ * Text Domain:       pdc-internal-products
  * Domain Path:       /languages
  */
 
-use OWC\PDC\InterneProducten\Autoloader;
-use OWC\PDC\InterneProducten\Foundation\Plugin;
+use OWC\PDC\InternalProducts\Autoloader;
+use OWC\PDC\InternalProducts\Foundation\Plugin;
 
 /**
  * If this file is called directly, abort.

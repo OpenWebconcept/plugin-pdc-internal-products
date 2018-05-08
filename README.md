@@ -4,9 +4,8 @@ This README documents whatever steps are necessary to get this plugin up and run
 
 ### How do I get set up? ###
      
-* Unzip and/or move all files to the /wp-content/plugins/pdc-base directory
-* Log into WordPress admin and activate the ‘PDC Base’ plugin through the ‘Plugins’ menu
-* Go to the 'PDC instellingen pagina' in the left-hand menu to enter some of the required settings
+* Unzip and/or move all files to the /wp-content/plugins/pdc-internal-products directory
+* Log into WordPress admin and activate the ‘PDC Internal Products’ plugin through the ‘Plugins’ menu
 
 ### Filters & Actions
 
@@ -14,89 +13,7 @@ There are various [hooks](https://codex.wordpress.org/Plugin_API/Hooks), which a
 
 ##### Action for changing main Plugin object.
 ```php
-'owc/pdc-base/plugin'
-```
-
-See OWC\PDC\InterneProducten\Config->set method for a way to change this plugins config.
-
-Via the plugin object the following config settings can be adjusted
-- metaboxes
-- p2p_connections
-- posttypes
-- rest_api_fields
-- settings
-- settings_pages
-- taxonomies
-
-##### Filters the Posts to Posts connection defaults.
-```php
-owc/pdc-base/p2p-connection-defaults
-```
-
-##### Filters the per Posts to Posts connection, connection type args.
-```php
-owc/pdc-base/before-register-p2p-connection/{$posttypes_from}/{$posttypes_to]}
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-links
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-forms
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-downloads
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-title-alternative
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-appointment
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-featured_image
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-taxonomies
-owc/pdc-base/core/posttype/posttypes/pdc_item/get-taxonomies/taxonomy-ids
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcitem/field/get-connections
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcsubcategory/field/has-report
-```
-
-##### Filters the data retrieved for this Rest API field.
-```php
-owc/pdc-base/rest-api/pdcsubcategory/field/has-appointment
-```
-
-##### Filters the metaboxes to be registered just before registration.
-```php
-owc/pdc-base/before-register-metaboxes
-```
-
-##### Filters the settings to be registered just before registration..
-```php
-owc/pdc-base/before-register-settings
+'owc/pdc-internal-products/plugin'
 ```
 
 ### Translations ###
@@ -119,7 +36,7 @@ or start at the homepage: https://localise.biz/wordpress/plugin
 ### Running tests ###
 To run the Unit tests go to a command-line.
 ```bash
-cd /path/to/wordpress/htdocs/wp-content/plugins/pdc-base/
+cd /path/to/wordpress/htdocs/wp-content/plugins/pdc-internal-products/
 composer install
 phpunit
 ```
@@ -138,4 +55,4 @@ Create a Pull request to the OWC repository
 
 ### Who do I talk to? ###
 
-IF you have questions about or suggestions for this plugin, please contact <a href="mailto:hpeters@Buren.nl">Holger Peters</a> from Gemeente Buren.
+If you have questions about or suggestions for this plugin, please contact <a href="mailto:hpeters@Buren.nl">Holger Peters</a> from Gemeente Buren.

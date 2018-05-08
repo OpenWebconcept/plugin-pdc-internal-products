@@ -1,9 +1,9 @@
 <?php
 
-namespace OWC\PDC\InterneProducten\Foundation;
+namespace OWC\PDC\InternalProducts\Foundation;
 
 use Mockery as m;
-use OWC\PDC\InterneProducten\Tests\Unit\TestCase;
+use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
 
 class DependencyCheckerTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace OWC\PDC\InterneProducten\Tests\Unit;
+namespace OWC\PDC\InternalProducts\Tests\Unit;
 
 use PHPUnit\Framework\TestCase as PHPUnit;
 
