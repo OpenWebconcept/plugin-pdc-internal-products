@@ -1,6 +1,13 @@
 # README #
 
-This README documents whatever steps are necessary to get this plugin up and running.
+The Internal Products plugin splits items of the PDC into two types: internal and external.
+
+PDC items will need to be coupled to either one of the two types in order for them to show up in the endpoint. This to prevent accidental mixing of internal and external.
+
+The `pdc-item` endpoint will be forced to only show items with type "external". 
+
+To show internal items you can specify the `type` parameter, like so: `pdc-item?type=internal`.
+
 
 ### How do I get set up? ###
      
