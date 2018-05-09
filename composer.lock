@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ee4fc1a6a76161799c4ad1178b043d9",
-    "packages": [],
+    "content-hash": "2058c61a4aa7ee2e3ab34d52f10eb1cb",
+    "packages": [
+        {
+            "name": "plugin/pdc-base",
+            "version": "dev-feat-namespace",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org-owc:openwebconcept/plugin-pdc-base.git",
+                "reference": "3e638731ecc44e34bfe39745bfb38c573f47d917"
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "10up/wp_mock": "dev-master",
+                "mockery/mockery": "1.0.*",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "OWC\\PDC\\Base\\": "./src/Base",
+                    "OWC\\PDC\\Base\\Tests\\": "./tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Ruud Laan",
+                    "email": "ruud@yard.nl",
+                    "homepage": "https://www.yarddigital.nl"
+                },
+                {
+                    "name": "Edwin Siebel",
+                    "email": "edwin@yard.nl",
+                    "homepage": "https://www.yarddigital.nl"
+                }
+            ],
+            "description": "PDC base plugin",
+            "time": "2018-05-08 14:50:33"
+        }
+    ],
     "packages-dev": [
         {
             "name": "10up/wp_mock",
@@ -1117,45 +1157,6 @@
             "time": "2018-01-06T05:45:45+00:00"
         },
         {
-            "name": "plugin/pdc-base",
-            "version": "dev-feat-namespace",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org-owc:openwebconcept/plugin-pdc-base.git",
-                "reference": "3e638731ecc44e34bfe39745bfb38c573f47d917"
-            },
-            "require": {
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "10up/wp_mock": "dev-master",
-                "mockery/mockery": "1.0.*",
-                "phpmd/phpmd": "@stable",
-                "phpunit/phpunit": "~6.0"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "OWC\\PDC\\Base\\": "./src/Base",
-                    "OWC\\PDC\\Base\\Tests\\": "./tests"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Ruud Laan",
-                    "email": "ruud@yard.nl",
-                    "homepage": "https://www.yarddigital.nl"
-                },
-                {
-                    "name": "Edwin Siebel",
-                    "email": "edwin@yard.nl",
-                    "homepage": "https://www.yarddigital.nl"
-                }
-            ],
-            "description": "PDC base plugin",
-            "time": "2018-05-08T14:50:33+00:00"
-        },
-        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -2040,8 +2041,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "10up/wp_mock": 20,
         "plugin/pdc-base": 20,
+        "10up/wp_mock": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": false,
