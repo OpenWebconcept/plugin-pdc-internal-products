@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2058c61a4aa7ee2e3ab34d52f10eb1cb",
+    "content-hash": "0bd9284fd3187f7094710804d0365374",
     "packages": [
         {
             "name": "plugin/pdc-base",
             "version": "dev-feat-namespace",
             "source": {
                 "type": "git",
-                "url": "git@bitbucket.org-owc:openwebconcept/plugin-pdc-base.git",
+                "url": "git@bitbucket.org:openwebconcept/plugin-pdc-base.git",
                 "reference": "3e638731ecc44e34bfe39745bfb38c573f47d917"
             },
             "require": {
@@ -86,7 +86,7 @@
                 "GPL-2.0+"
             ],
             "description": "A mocking library to take the pain out of unit testing for WordPress",
-            "time": "2018-04-27 16:32:09"
+            "time": "2018-04-27T16:32:09+00:00"
         },
         {
             "name": "antecedent/patchwork",
