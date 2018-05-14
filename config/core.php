@@ -23,14 +23,18 @@ return [
     /**
      * Dependencies upon which the plugin relies.
      *
-     * Should contain: label, version, file.
+     * Required: type, label
+     * Optional: message
+     *
+     * Type: plugin
+     * - Required: file
+     * - Optional: version
+     *
+     * Type: class
+     * - Required: name
      */
     'dependencies' => [
-        [
-            'label'   => 'OpenPDC Base',
-            'file'    => 'pdc-base/pdc-base.php',
-            'version' => '2.0.0'
-        ]
+        //
     ]
 
 ];
