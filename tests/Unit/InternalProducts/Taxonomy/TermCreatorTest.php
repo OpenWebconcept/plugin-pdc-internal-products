@@ -1,10 +1,10 @@
 <?php
 
-namespace OWC\PDC\InternalProducts\Tests\Taxonomy;
+namespace OWC\PDC\Internal\Tests\Taxonomy;
 
 use Mockery as m;
-use OWC\PDC\InternalProducts\Taxonomy\TermCreator;
-use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
+use OWC\PDC\Internal\Taxonomy\TermCreator;
+use OWC\PDC\Internal\Tests\Unit\TestCase;
 
 class TermCreatorTest extends TestCase
 {

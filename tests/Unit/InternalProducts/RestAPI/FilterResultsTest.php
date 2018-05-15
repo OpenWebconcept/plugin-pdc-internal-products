@@ -1,10 +1,10 @@
 <?php
 
-namespace OWC\PDC\InternalProducts\Tests\RestAPI;
+namespace OWC\PDC\Internal\Tests\RestAPI;
 
 use Mockery as m;
-use OWC\PDC\InternalProducts\RestAPI\FilterResults;
-use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
+use OWC\PDC\Internal\RestAPI\FilterResults;
+use OWC\PDC\Internal\Tests\Unit\TestCase;
 
 class FilterResultsTest extends TestCase
 {

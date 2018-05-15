@@ -1,13 +1,13 @@
 <?php
 
-namespace OWC\PDC\InternalProducts\Tests\RestAPI;
+namespace OWC\PDC\Internal\Tests\RestAPI;
 
 use Mockery as m;
 use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Base\Foundation\Loader;
-use OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider;
-use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
-use OWC\PDC\InternalProducts\RestAPI\FilterResults;
+use OWC\PDC\Internal\RestAPI\RestAPIServiceProvider;
+use OWC\PDC\Internal\Tests\Unit\TestCase;
+use OWC\PDC\Internal\RestAPI\FilterResults;
 
 class RestAPIServiceProviderTest extends TestCase
 {

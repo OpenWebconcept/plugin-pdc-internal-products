@@ -1,12 +1,12 @@
 <?php
 
-namespace OWC\PDC\InternalProducts\Tests\Taxonomy;
+namespace OWC\PDC\Internal\Tests\Taxonomy;
 
 use Mockery as m;
 use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\Base\Foundation\Loader;
-use OWC\PDC\InternalProducts\Taxonomy\TaxonomyServiceProvider;
-use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
+use OWC\PDC\Internal\Taxonomy\TaxonomyServiceProvider;
+use OWC\PDC\Internal\Tests\Unit\TestCase;
 
 class TaxonomyServiceProviderTest extends TestCase
 {
