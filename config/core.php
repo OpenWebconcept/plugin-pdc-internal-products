@@ -11,6 +11,7 @@ return [
          */
         OWC\PDC\Internal\RestAPI\RestAPIServiceProvider::class,
         OWC\PDC\Internal\Taxonomy\TaxonomyServiceProvider::class,
+        OWC\PDC\Internal\Data\DataServiceProvider::class,
 
         /**
          * Providers specific to the admin.
