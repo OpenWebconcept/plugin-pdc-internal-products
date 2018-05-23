@@ -14,7 +14,8 @@ class RestAPIServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        add_action('rest_api_init', [ $this, 'registerRoutes' ], 'register');
+        $this->plugin->loader->addAction('rest_api_init', $this, 'registerRoutes');
+        $this->plugin->loader->addFilter('owc/pdc/rest-api/items/query', new FilterDefaultItems, 'filter', 10, 1);
     }
 
     /**

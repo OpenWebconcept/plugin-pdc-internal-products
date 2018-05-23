@@ -2,19 +2,23 @@
 
 namespace OWC\PDC\Internal\RestAPI;
 
-use OWC\PDC\Base\Models\ItemModel;
+use OWC\PDC\Base\Models\Item;
+use OWC\PDC\Base\RestAPI\Controllers\BaseController;
+use WP_REST_Request;
 
-class InternalItemsController
+class InternalItemsController extends BaseController
 {
 
     /**
      * Get a list of all internal items.
      *
+     * @param WP_REST_Request $request
+     *
      * @return array
      */
-    public function getItems()
+    public function getItems(WP_REST_Request $request)
     {
-        $items = (new ItemModel())
+        $items = (new Item())
             ->query([
                 'tax_query' => [
                     [
@@ -24,9 +28,12 @@ class InternalItemsController
                     ]
                 ]
             ])
+            ->query($this->getPaginatorParams($request))
             ->hide([ 'connected' ]);
 
-        return $items->all();
+        $posts = $items->all();
+
+        return $this->addPaginator($posts, $items->getQuery());
     }
 
 }
