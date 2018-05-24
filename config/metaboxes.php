@@ -13,13 +13,14 @@ return [
     'fields'     => [
         'internaldata' => [
             'group' => [
-                'id'          => 'pdc_internaldata',
-                'type'        => 'group',
-                'clone'       => true,
-                'sort_clone'  => true,
-                'collapsible' => true,
-                'group_title' => [ 'field' => 'internaldata_key' ],
-                'fields'      => [
+                'id'            => 'pdc_internaldata',
+                'type'          => 'group',
+                'clone'         => true,
+                'sort_clone'    => true,
+                'collapsible'   => true,
+                'group_title'   => [ 'field' => 'internaldata_key' ],
+                'default_state' => 'collapsed',
+                'fields'        => [
                     [
                         'id'   => 'internaldata_key',
                         'name' => __('Key', 'pdc-internal'),
