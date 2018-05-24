@@ -7,6 +7,9 @@ return [
     'context'    => 'normal',
     'priority'   => 'high',
     'autosave'   => true,
+    'include'    => [
+        'pdc-type' => 'internal'
+    ],
     'fields'     => [
         'internaldata' => [
             'group' => [
