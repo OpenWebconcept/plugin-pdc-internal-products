@@ -5,7 +5,7 @@ The Internal Products plugin splits items of the PDC into two types: internal an
 PDC items will need to be coupled to either one of the two types in order for them to show up in the endpoint. This to prevent accidental mixing of internal and external.
 
 The `items` endpoint will be forced to show external items only. 
-The internal items can be accessed on the `owc/pdc/v1/internal/items` endpoint.
+The internal items can be accessed on the `owc/pdc/v1/items/internal` endpoint.
 
 Internal data will be present on all items which have the internal type.
 
