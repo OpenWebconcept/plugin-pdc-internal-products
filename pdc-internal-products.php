@@ -4,8 +4,8 @@
  * Plugin URI:        https://www.openwebconcept.nl/
  * Description:       Splits the PDC items for internal and/or external use
  * Version:           1.0.0
- * Author:            Melvin Koopmans
- * Author URI:        https://www.yarddigital.nl/
+ * Author:            Yard Internet
+ * Author URI:        https://www.yardinternet.nl/
  * License:           GPL-3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       pdc-internal-products
