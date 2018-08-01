@@ -27,8 +27,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "OWC\\PDC\\InternalProducts\\": "./src/InternalProducts",
-      "OWC\\PDC\\InternalProducts\\Tests\\": "./tests"
+      "OWC\\PDC\\Internal\\": "./src/Internal",
+      "OWC\\PDC\\Internal\\Tests\\": "./tests"
     }
   },
   "scripts": {

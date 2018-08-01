@@ -1,6 +1,6 @@
 <?php
 
-namespace OWC\PDC\InternalProducts\Foundation;
+namespace OWC\PDC\Internal\Foundation;
 
 use OWC\PDC\Base\Foundation\Plugin as BasePlugin;
 
@@ -12,7 +12,7 @@ class Plugin extends BasePlugin
      *
      * @var string
      */
-    const NAME = 'pdc-internal-products';
+    const NAME = 'pdc-internal';
 
     /**
      * Version of the plugin.

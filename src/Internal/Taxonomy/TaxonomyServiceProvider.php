@@ -1,6 +1,6 @@
 <?php
 
-namespace OWC\PDC\InternalProducts\Taxonomy;
+namespace OWC\PDC\Internal\Taxonomy;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
 
@@ -19,8 +19,8 @@ class TaxonomyServiceProvider extends ServiceProvider
     {
         $termCreator = new TermCreator('pdc-type');
 
-        $termCreator->createIfNotExists(__('Internal', 'pdc-internal-products'));
-        $termCreator->createIfNotExists(__('External', 'pdc-internal-products'));
+        $termCreator->createIfNotExists('Internal');
+        $termCreator->createIfNotExists('External');
     }
 
 }

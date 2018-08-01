@@ -9,8 +9,9 @@ return [
         /**
          * Global providers.
          */
-        OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider::class,
-        OWC\PDC\InternalProducts\Taxonomy\TaxonomyServiceProvider::class,
+        OWC\PDC\Internal\RestAPI\RestAPIServiceProvider::class,
+        OWC\PDC\Internal\Taxonomy\TaxonomyServiceProvider::class,
+        OWC\PDC\Internal\Data\DataServiceProvider::class,
 
         /**
          * Providers specific to the admin.
@@ -23,7 +24,15 @@ return [
     /**
      * Dependencies upon which the plugin relies.
      *
-     * Should contain: label, version, file.
+     * Required: type, label
+     * Optional: message
+     *
+     * Type: plugin
+     * - Required: file
+     * - Optional: version
+     *
+     * Type: class
+     * - Required: name
      */
     'dependencies' => [
         [

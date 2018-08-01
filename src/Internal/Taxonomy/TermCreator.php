@@ -1,6 +1,6 @@
 <?php
 
-namespace OWC\PDC\InternalProducts\Taxonomy;
+namespace OWC\PDC\Internal\Taxonomy;
 
 class TermCreator
 {

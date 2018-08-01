@@ -4,15 +4,15 @@ The Internal Products plugin splits items of the PDC into two types: internal an
 
 PDC items will need to be coupled to either one of the two types in order for them to show up in the endpoint. This to prevent accidental mixing of internal and external.
 
-The `pdc-item` endpoint will be forced to only show items with type "external". 
+The `items` endpoint will be forced to show external items only. 
+The internal items can be accessed on the `owc/pdc/v1/items/internal` endpoint.
 
-To show internal items you can specify the `type` parameter, like so: `pdc-item?type=internal`.
-
+Internal data will be present on all items which have the internal type.
 
 ### How do I get set up? ###
      
-* Unzip and/or move all files to the /wp-content/plugins/pdc-internal-products directory
-* Log into WordPress admin and activate the ‘PDC Internal Products’ plugin through the ‘Plugins’ menu
+* Unzip and/or move all files to the /wp-content/plugins/pdc-internal directory
+* Log into WordPress admin and activate the ‘PDC Internal’ plugin through the ‘Plugins’ menu
 
 ### Filters & Actions
 
@@ -20,7 +20,7 @@ There are various [hooks](https://codex.wordpress.org/Plugin_API/Hooks), which a
 
 ##### Action for changing main Plugin object.
 ```php
-'owc/pdc-internal-products/plugin'
+'owc/pdc-internal/plugin'
 ```
 
 ### Translations ###
@@ -43,7 +43,7 @@ or start at the homepage: https://localise.biz/wordpress/plugin
 ### Running tests ###
 To run the Unit tests go to a command-line.
 ```bash
-cd /path/to/wordpress/htdocs/wp-content/plugins/pdc-internal-products/
+cd /path/to/wordpress/htdocs/wp-content/plugins/pdc-internal/
 composer install
 phpunit
 ```
