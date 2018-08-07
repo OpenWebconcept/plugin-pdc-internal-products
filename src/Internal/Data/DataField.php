@@ -1,4 +1,7 @@
 <?php
+/**
+ * Responsible for the filtering the internal keyword.
+ */
 
 namespace OWC\PDC\Internal\Data;
 
@@ -6,7 +9,7 @@ use OWC\PDC\Base\Support\CreatesFields;
 use WP_Post;
 
 /**
- * Filters the internal keyword, and
+ * Filters the internal keyword, and returns array.
  */
 class DataField extends CreatesFields
 {

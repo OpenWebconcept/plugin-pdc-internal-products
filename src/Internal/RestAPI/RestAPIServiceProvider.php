@@ -1,12 +1,23 @@
 <?php
+/**
+ * Boots the rest API service provider.
+ */
 
 namespace OWC\PDC\Internal\RestAPI;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
 
+/**
+ * Boots the rest API service provider.
+ */
 class RestAPIServiceProvider extends ServiceProvider
 {
 
+    /**
+     * Endpoint of the rest API.
+     *
+     * @var string $namespace;
+     */
     private $namespace = 'owc/pdc/v1';
 
     /**

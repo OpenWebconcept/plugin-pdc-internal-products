@@ -1,4 +1,7 @@
 <?php
+/**
+ * Boots the DataServiceProvider.
+ */
 
 namespace OWC\PDC\Internal\Data;
 
@@ -6,6 +9,9 @@ use OWC\PDC\Base\Foundation\ServiceProvider;
 use OWC\PDC\Base\Models\Item;
 use WP_Post;
 
+/**
+ * Boots the DataServiceProvider.
+ */
 class DataServiceProvider extends ServiceProvider
 {
 
@@ -21,5 +27,4 @@ class DataServiceProvider extends ServiceProvider
 
         $this->plugin->loader->addAction('owc/pdc-base/plugin', new Metaboxes($this->plugin), 'register', 10, 1);
     }
-
 }

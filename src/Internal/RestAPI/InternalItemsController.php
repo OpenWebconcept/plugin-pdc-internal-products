@@ -1,4 +1,7 @@
 <?php
+/**
+ * Get all the items of, which have the 'internal' taxonomy type.
+ */
 
 namespace OWC\PDC\Internal\RestAPI;
 
@@ -6,6 +9,9 @@ use OWC\PDC\Base\Models\Item;
 use OWC\PDC\Base\RestAPI\Controllers\BaseController;
 use WP_REST_Request;
 
+/**
+ * Controls the retrieval of the internal pdc items.
+ */
 class InternalItemsController extends BaseController
 {
 
@@ -23,13 +29,13 @@ class InternalItemsController extends BaseController
                 'tax_query' => [
                     [
                         'taxonomy' => 'pdc-type',
-                        'field'    => 'slug',
-                        'terms'    => 'internal'
-                    ]
-                ]
+                        'field' => 'slug',
+                        'terms' => 'internal',
+                    ],
+                ],
             ])
             ->query($this->getPaginatorParams($request))
-            ->hide([ 'connected' ]);
+            ->hide(['connected']);
 
         $posts = $items->all();
 

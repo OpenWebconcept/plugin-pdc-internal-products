@@ -96,4 +96,3 @@ vendor
 !/src/vendor
 
 tests/coverage
-docs/
