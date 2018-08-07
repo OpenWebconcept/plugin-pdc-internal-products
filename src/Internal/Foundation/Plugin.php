@@ -4,6 +4,11 @@ namespace OWC\PDC\Internal\Foundation;
 
 use OWC\PDC\Base\Foundation\Plugin as BasePlugin;
 
+/**
+ * The base of the plugin.
+ *
+ * Sets the name and version of the plugin.
+ */
 class Plugin extends BasePlugin
 {
 

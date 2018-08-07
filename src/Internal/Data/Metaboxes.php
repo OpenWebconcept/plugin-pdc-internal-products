@@ -1,9 +1,17 @@
 <?php
 
+/**
+ * Registers the metabox field.
+ */
 namespace OWC\PDC\Internal\Data;
 
 use OWC\PDC\Base\Foundation\Plugin;
 
+/**
+ * Registers the metabox field.
+ *
+ * This is achieved based on the config key "metaboxes.internaldata".
+ */
 class Metaboxes
 {
 
@@ -14,6 +22,11 @@ class Metaboxes
      */
     private $plugin;
 
+    /**
+     * Dependency injection of the plugin, for future use.
+     *
+     * @param Plugin $plugin
+     */
     public function __construct(Plugin $plugin)
     {
         $this->plugin = $plugin;

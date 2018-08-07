@@ -1,9 +1,16 @@
 <?php
 
+/**
+ * Filters PDC item are of type "external".
+ */
+
 namespace OWC\PDC\Internal\RestAPI;
 
 use OWC\PDC\Base\Support\Traits\AppendToTaxQuery;
 
+/**
+ * Filters PDC item are of type "external".
+ */
 class FilterDefaultItems
 {
 
@@ -22,8 +29,8 @@ class FilterDefaultItems
     {
         $args['tax_query'] = $this->appendToTaxQuery($args['tax_query'] ?? [], [
             'taxonomy' => 'pdc-type',
-            'field'    => 'slug',
-            'terms'    => 'external'
+            'field' => 'slug',
+            'terms' => 'external',
         ]);
 
         return $args;

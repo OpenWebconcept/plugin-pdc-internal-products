@@ -38,6 +38,7 @@
     "test": [
       "@unit",
       "@integration"
-    ]
+    ],
+    "docs": "./vendor/bin/phpdoc -d ./src/Internal -t ./docs/plugins/internal"
   }
 }
