@@ -3,7 +3,7 @@
  * Boots the rest API service provider.
  */
 
-namespace OWC\PDC\Internal\RestAPI;
+namespace OWC\PDC\InternalProducts\RestAPI;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
 
@@ -31,6 +31,8 @@ class RestAPIServiceProvider extends ServiceProvider
 
     /**
      * Register REST routes.
+     * 
+     * @link https://{url}/wp-json/owc/pdc/v1/items/internal
      */
     public function registerRoutes()
     {

@@ -1,10 +1,9 @@
 <?php
-
 /**
  * Filters PDC item are of type "external".
  */
 
-namespace OWC\PDC\Internal\RestAPI;
+namespace OWC\PDC\InternalProducts\RestAPI;
 
 use OWC\PDC\Base\Support\Traits\AppendToTaxQuery;
 

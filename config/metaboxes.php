@@ -2,7 +2,7 @@
 
 return [
     'id'         => 'pdc_internaldata',
-    'title'      => __('Internal Data', 'pdc-internal'),
+    'title'      => __('Internal Data', 'pdc-internal-products'),
     'post_types' => [ 'pdc-item' ],
     'context'    => 'normal',
     'priority'   => 'high',
@@ -23,12 +23,12 @@ return [
                 'fields'        => [
                     [
                         'id'   => 'internaldata_key',
-                        'name' => __('Key', 'pdc-internal'),
+                        'name' => __('Key', 'pdc-internal-products'),
                         'type' => 'text',
                     ],
                     [
                         'id'   => 'internaldata_value',
-                        'name' => __('Value', 'pdc-internal'),
+                        'name' => __('Value', 'pdc-internal-products'),
                         'type' => 'text',
                     ],
                 ]

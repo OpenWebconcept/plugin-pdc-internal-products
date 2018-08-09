@@ -3,7 +3,7 @@
  * Termcreator to create term if not exist..
  */
 
-namespace OWC\PDC\Internal\Taxonomy;
+namespace OWC\PDC\InternalProducts\Taxonomy;
 
 /**
  * Termcreator to create term if not exist.

@@ -21,14 +21,14 @@
   },
   "require-dev": {
     "mockery/mockery": "1.0.*",
-    "phpunit/phpunit": "~6.0",
+    "phpunit/phpunit": "~7.0",
     "10up/wp_mock": "dev-master",
     "phpdocumentor/phpdocumentor": "2.*"
   },
   "autoload-dev": {
     "psr-4": {
-      "OWC\\PDC\\Internal\\": "./src/Internal",
-      "OWC\\PDC\\Internal\\Tests\\": "./tests"
+      "OWC\\PDC\\InternalProducts\\": "./src/InternalProducts",
+      "OWC\\PDC\\InternalProducts\\Tests\\": "./tests"
     }
   },
   "scripts": {
@@ -39,6 +39,6 @@
       "@unit",
       "@integration"
     ],
-    "docs": "./vendor/bin/phpdoc -d ./src/Internal -t ./docs"
+    "docs": "./vendor/bin/phpdoc -d ./src/InternalProducts -t ./docs"
   }
 }

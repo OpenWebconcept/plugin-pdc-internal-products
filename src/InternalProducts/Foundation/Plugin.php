@@ -3,7 +3,7 @@
  * The base of the plugin.
  */
 
-namespace OWC\PDC\Internal\Foundation;
+namespace OWC\PDC\InternalProducts\Foundation;
 
 use OWC\PDC\Base\Foundation\Plugin as BasePlugin;
 
@@ -18,7 +18,7 @@ class Plugin extends BasePlugin
      *
      * @const string NAME
      */
-    const NAME = 'pdc-internal';
+    const NAME = 'pdc-internal-products';
 
     /**
      * Version of the plugin.
@@ -26,6 +26,5 @@ class Plugin extends BasePlugin
      *
      * @const string VERSION
      */
-    const VERSION = '1.0.0';
-
+    const VERSION = '1.1.0';
 }

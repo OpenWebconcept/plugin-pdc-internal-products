@@ -3,7 +3,7 @@
  *  TaxonomyServiceProvider boots necessary methods.
  */
 
-namespace OWC\PDC\Internal\Taxonomy;
+namespace OWC\PDC\InternalProducts\Taxonomy;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
 

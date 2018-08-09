@@ -3,7 +3,7 @@
  * Get all the items of, which have the 'internal' taxonomy type.
  */
 
-namespace OWC\PDC\Internal\RestAPI;
+namespace OWC\PDC\InternalProducts\RestAPI;
 
 use OWC\PDC\Base\Models\Item;
 use OWC\PDC\Base\RestAPI\Controllers\BaseController;

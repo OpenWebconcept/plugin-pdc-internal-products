@@ -3,19 +3,8 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package OWC_PDC_Base
+ * @package OWC\PDC\InternalProducts
  */
-
-//$_tests_dir = getenv( 'WP_TESTS_DIR' );
-//if ( ! $_tests_dir ) {
-//	$_tests_dir = '/tmp/wordpress-tests-lib';
-//}
-//
-//// Give access to tests_add_filter() function.
-//require_once $_tests_dir . '/includes/functions.php';
-//
-//// Start up the WP testing environment.
-//require $_tests_dir . '/includes/bootstrap.php';
 
 /**
  * Load dependencies with Composer autoloader.
@@ -30,9 +19,9 @@ define('WP_PLUGIN_DIR', __DIR__);
 \WP_Mock::setUsePatchwork( true );
 \WP_Mock::bootstrap();
 
-$GLOBALS['pdc-base'] = array(
-	'active_plugins' => array( 'pdc-base/pdc-base.php' ),
-);
+$GLOBALS['pdc-internal-products'] = [
+	'active_plugins' => ['pdc-internal-products/pdc-internal-products.php'],
+];
 
 class WP_CLI {
 	public static function add_command() {}

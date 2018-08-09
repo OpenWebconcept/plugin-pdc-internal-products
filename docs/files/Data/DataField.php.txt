@@ -3,7 +3,7 @@
  * Responsible for the filtering the internal keyword.
  */
 
-namespace OWC\PDC\Internal\Data;
+namespace OWC\PDC\InternalProducts\Data;
 
 use OWC\PDC\Base\Support\CreatesFields;
 use WP_Post;
@@ -44,6 +44,5 @@ class DataField extends CreatesFields
             return !empty($item['internaldata_key']) && !empty($item['internaldata_value']);
         });
     }
-
 }
 

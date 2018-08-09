@@ -1,9 +1,9 @@
 <?php
-
 /**
  * Registers the metabox field.
  */
-namespace OWC\PDC\Internal\Data;
+
+ namespace OWC\PDC\InternalProducts\Data;
 
 use OWC\PDC\Base\Foundation\Plugin;
 

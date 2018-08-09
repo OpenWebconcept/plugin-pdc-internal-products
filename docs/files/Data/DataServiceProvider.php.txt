@@ -3,7 +3,7 @@
  * Boots the DataServiceProvider.
  */
 
-namespace OWC\PDC\Internal\Data;
+namespace OWC\PDC\InternalProducts\Data;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
 use OWC\PDC\Base\Models\Item;

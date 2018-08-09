@@ -1,14 +1,14 @@
 <?php
 
-namespace OWC\PDC\Internal\RestAPI;
+namespace OWC\PDC\InternalProducts\RestAPI;
 
 use Mockery as m;
 use OWC\PDC\Base\Foundation\Config;
 use OWC\PDC\Base\Foundation\Loader;
 use OWC\PDC\Base\Foundation\Plugin;
-use OWC\PDC\Internal\RestAPI\FilterDefaultItems;
-use OWC\PDC\Internal\RestAPI\RestAPIServiceProvider;
-use OWC\PDC\Internal\Tests\Unit\TestCase;
+use OWC\PDC\InternalProducts\RestAPI\FilterDefaultItems;
+use OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider;
+use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
 use WP_Mock;
 
 class RestAPIServiceProviderTest extends TestCase
