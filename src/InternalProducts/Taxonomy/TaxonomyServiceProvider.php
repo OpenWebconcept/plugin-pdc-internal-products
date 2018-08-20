@@ -31,5 +31,4 @@ class TaxonomyServiceProvider extends ServiceProvider
         $termCreator->createIfNotExists('Internal');
         $termCreator->createIfNotExists('External');
     }
-
 }
