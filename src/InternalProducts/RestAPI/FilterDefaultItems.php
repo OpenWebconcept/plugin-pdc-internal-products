@@ -34,5 +34,4 @@ class FilterDefaultItems
 
         return $args;
     }
-
 }

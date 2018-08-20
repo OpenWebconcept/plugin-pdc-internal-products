@@ -41,5 +41,4 @@ class InternalItemsController extends BaseController
 
         return $this->addPaginator($posts, $items->getQuery());
     }
-
 }

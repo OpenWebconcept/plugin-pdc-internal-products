@@ -41,5 +41,4 @@ class Metaboxes
     {
         $basePlugin->config->set('metaboxes.internaldata', $this->plugin->config->get('metaboxes'));
     }
-
 }
