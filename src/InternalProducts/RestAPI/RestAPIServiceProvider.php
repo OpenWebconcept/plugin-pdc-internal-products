@@ -31,7 +31,7 @@ class RestAPIServiceProvider extends ServiceProvider
 
     /**
      * Register REST routes.
-     * 
+     *
      * @link https://{url}/wp-json/owc/pdc/v1/items/internal
      */
     public function registerRoutes()
