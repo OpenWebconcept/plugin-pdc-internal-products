@@ -21,7 +21,7 @@ class DataServiceProvider extends ServiceProvider
     public function register()
     {
         // Add the internal data to all posts which have internal data.
-        Item::addGlobalField('internal_data', new DataField($this->plugin), function (WP_Post $post) {
+        Item::addGlobalField('internal-data', new DataField($this->plugin), function (WP_Post $post) {
             return has_term('internal', 'pdc-type', $post->ID);
         });
 

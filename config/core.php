@@ -11,13 +11,12 @@ return [
          */
         OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider::class,
         OWC\PDC\InternalProducts\Taxonomy\TaxonomyServiceProvider::class,
-        OWC\PDC\InternalProducts\Data\DataServiceProvider::class,
 
         /**
          * Providers specific to the admin.
          */
         'admin' => [
-        ]
+        ],
 
     ],
 
@@ -39,8 +38,8 @@ return [
             'label'   => 'OpenPDC Base',
             'file'    => 'pdc-base/pdc-base.php',
             'version' => '2.0.0',
-            'type' => ''
-        ]
-    ]
+            'type'    => '',
+        ],
+    ],
 
 ];

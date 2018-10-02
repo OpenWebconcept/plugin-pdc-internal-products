@@ -30,15 +30,24 @@ class RestAPIServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register REST routes.
+     * Register routes on the rest API.
      *
+     * Get all items, including internal values and internal items.
      * @link https://{url}/wp-json/owc/pdc/v1/items/internal
+     *
+     * Get item, including internal values and internal item.
+     * @link https://{url}/wp-json/owc/pdc/v1/items/{id}/internal
      */
     public function registerRoutes()
     {
         register_rest_route($this->namespace, 'items/internal', [
-            'methods' => 'GET',
+            'methods'  => 'GET',
             'callback' => [new InternalItemsController($this->plugin), 'getItems'],
+        ]);
+
+        register_rest_route($this->namespace, 'items/(?P<id>\d+)/internal', [
+            'methods'  => 'GET',
+            'callback' => [new InternalItemsController($this->plugin), 'getItem'],
         ]);
     }
 }
