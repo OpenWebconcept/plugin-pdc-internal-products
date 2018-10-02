@@ -3,7 +3,7 @@
  * Registers the metabox field.
  */
 
- namespace OWC\PDC\InternalProducts\Data;
+namespace OWC\PDC\InternalProducts\Data;
 
 use OWC\PDC\Base\Foundation\Plugin;
 
@@ -39,6 +39,6 @@ class Metaboxes
      */
     public function register(Plugin $basePlugin)
     {
-        $basePlugin->config->set('metaboxes.internaldata', $this->plugin->config->get('metaboxes'));
+        $basePlugin->config->set('metaboxes.internaldata', $this->plugin->config->get('metaboxes.internaldata'));
     }
 }
