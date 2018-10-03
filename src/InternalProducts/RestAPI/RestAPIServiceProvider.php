@@ -41,13 +41,19 @@ class RestAPIServiceProvider extends ServiceProvider
     public function registerRoutes()
     {
         register_rest_route($this->namespace, 'items/internal', [
-            'methods'  => 'GET',
-            'callback' => [new InternalItemsController($this->plugin), 'getItems'],
+            'methods'             => 'GET',
+            'callback'            => [new InternalItemsController($this->plugin), 'getItems'],
+            'permission_callback' => function () {
+                return true;
+            },
         ]);
 
         register_rest_route($this->namespace, 'items/(?P<id>\d+)/internal', [
-            'methods'  => 'GET',
-            'callback' => [new InternalItemsController($this->plugin), 'getItem'],
+            'methods'             => 'GET',
+            'callback'            => [new InternalItemsController($this->plugin), 'getItem'],
+            'permission_callback' => function () {
+                return true;
+            },
         ]);
     }
 }
