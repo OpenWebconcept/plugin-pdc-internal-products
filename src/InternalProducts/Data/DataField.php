@@ -25,8 +25,8 @@ class DataField extends CreatesFields
     {
         return array_map(function ($item) {
             return [
-                'key' => $item['internaldata_key'],
-                'value' => $item['internaldata_value'],
+                'title'   => $item['internaldata_key'],
+                'content' => $item['internaldata_value'],
             ];
         }, $this->getData($post));
     }
