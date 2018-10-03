@@ -28,8 +28,8 @@ class FilterDefaultItems
     {
         $args['tax_query'] = $this->appendToTaxQuery($args['tax_query'] ?? [], [
             'taxonomy' => 'pdc-type',
-            'field' => 'slug',
-            'terms' => 'external',
+            'field'    => 'slug',
+            'terms'    => 'external',
         ]);
 
         return $args;

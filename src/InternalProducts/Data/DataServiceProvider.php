@@ -16,13 +16,13 @@ class DataServiceProvider extends ServiceProvider
 {
 
     /**
-     * Register the service provider.
+     * Register the service provider, only when in admin or if accessed via the /internal endpoint.
      */
     public function register()
     {
-        // Add the internal data to all posts which have internal data.
+        // Add the internal data to all pdc items, when in admin or if accessed via the /internal endpoint.
         Item::addGlobalField('internal-data', new DataField($this->plugin), function (WP_Post $post) {
-            return has_term('internal', 'pdc-type', $post->ID);
+            return true;
         });
 
         $this->plugin->loader->addAction('owc/pdc-base/plugin', new Metaboxes($this->plugin), 'register', 10, 1);

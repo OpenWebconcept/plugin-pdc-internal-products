@@ -22,13 +22,18 @@ return [
                     'fields'     => [
                         [
                             'id'   => 'internaldata_key',
-                            'name' => __('Key', 'pdc-internal-products'),
+                            'name' => __('Title', 'pdc-internal-products'),
                             'type' => 'text',
                         ],
                         [
-                            'id'   => 'internaldata_value',
-                            'name' => __('Value', 'pdc-internal-products'),
-                            'type' => 'wysiwyg',
+                            'id'      => 'internaldata_value',
+                            'name'    => __('Content', 'pdc-internal-products'),
+                            'type'    => 'wysiwyg',
+                            'desc'    => __('Use of HTML is allowed', 'pdc-internal-products'),
+                            'options' => array(
+                                'textarea_rows' => 4,
+                                'teeny'         => false,
+                            ),
                         ],
                     ],
                 ],

@@ -16,6 +16,7 @@ return [
          * Providers specific to the admin.
          */
         'admin' => [
+            OWC\PDC\InternalProducts\Data\DataServiceProvider::class,
         ],
 
     ],
