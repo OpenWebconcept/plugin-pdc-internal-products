@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 1.2.2
+### Fix:
+* (fix): check if required file for ```is_plugin_active``` is already loaded, otherwise load it. Props @Jasper Heidebrink
+
 ## Version 1.2.1
 ### Fix:
  * Add enters to output for internal data in API.

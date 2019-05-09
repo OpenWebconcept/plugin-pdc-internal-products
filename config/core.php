@@ -1,11 +1,10 @@
 <?php
 
 return [
-
     /**
      * Service Providers.
      */
-    'providers'    => [
+    'providers' => [
         /**
          * Global providers.
          */
@@ -18,7 +17,6 @@ return [
         'admin' => [
             OWC\PDC\InternalProducts\Data\DataServiceProvider::class,
         ],
-
     ],
 
     /**
@@ -36,11 +34,10 @@ return [
      */
     'dependencies' => [
         [
-            'label'   => 'OpenPDC Base',
-            'file'    => 'pdc-base/pdc-base.php',
-            'version' => '2.0.0',
-            'type'    => '',
+            'type' => 'plugin',
+            'label' => 'OpenPDC Base',
+            'version' => '2.1.5',
+            'file' => 'pdc-base/pdc-base.php',
         ],
     ],
-
 ];
