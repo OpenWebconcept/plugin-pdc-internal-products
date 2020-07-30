@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Boots the DataServiceProvider.
  */
@@ -6,7 +7,7 @@
 namespace OWC\PDC\InternalProducts\Data;
 
 use OWC\PDC\Base\Foundation\ServiceProvider;
-use OWC\PDC\Base\Models\Item;
+use OWC\PDC\Base\Repositories\Item;
 use WP_Post;
 
 /**
