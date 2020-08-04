@@ -1,9 +1,10 @@
 <?php
+
 /**
  * Plugin Name:       PDC Internal Products
  * Plugin URI:        https://www.openwebconcept.nl/
  * Description:       Splits all of the PDC items in two distinct types: internal and/or external products.
- * Version:           1.2.2
+ * Version:           2.0.0
  * Author:            Yard Internet
  * Author URI:        https://www.yardinternet.nl/
  * License:           GPL-3.0
