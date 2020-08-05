@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 2.0.1
+
+### Fix
+
+-   Fix incorrect use statement in InternalItemsController
+
 ## Version 2.0.0
 
 ### Changed
