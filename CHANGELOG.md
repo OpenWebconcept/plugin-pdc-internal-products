@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 2.0.2
+
+### Feat
+
+-   Add connected items to api
+
 ## Version 2.0.1
 
 ### Fix

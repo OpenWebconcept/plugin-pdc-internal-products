@@ -46,11 +46,14 @@ class InternalItemsController extends BaseController
     {
 
         $this->addFields();
-
+        $parameters = $this->convertParameters($request->get_params());
         $items = (new Item())
             ->query([])
-            ->query($this->getPaginatorParams($request))
-            ->hide(['connected']);
+            ->query($this->getPaginatorParams($request));
+
+        if (false === $parameters['include-connected']) {
+            $items->hide(['connected']);
+        }
 
         $posts = $items->all();
 
@@ -76,7 +79,7 @@ class InternalItemsController extends BaseController
             ->find($id);
 
         if (!$item) {
-            return new WP_Error('no_item_found', sprintf('Item with ID "%d" not found', $id), [
+            return new \WP_Error('no_item_found', sprintf('Item with ID "%d" not found', $id), [
                 'status' => 404,
             ]);
         }
@@ -92,5 +95,34 @@ class InternalItemsController extends BaseController
     protected function addFields()
     {
         (new DataServiceProvider($this->plugin))->register();
+    }
+
+    /**
+     * Convert the parameters to the allowed ones.
+     *
+     * @param array $parametersFromRequest
+     * @return array
+     */
+    protected function convertParameters(array $parametersFromRequest): array
+    {
+        $parameters = [];
+
+        if (isset($parametersFromRequest['name'])) {
+            $parameters['name'] = esc_attr($parametersFromRequest['name']);
+        }
+
+        $parameters['include-connected'] = (isset($parametersFromRequest['include-connected'])) ? true : false;
+
+        if (isset($parametersFromRequest['slug'])) {
+            $parameters['name'] = esc_attr($parametersFromRequest['slug']);
+            unset($parametersFromRequest['slug']);
+        }
+
+        if (isset($parametersFromRequest['id'])) {
+            $parameters['p'] = absint($parametersFromRequest['id']);
+            unset($parametersFromRequest['slug']);
+        }
+
+        return $parameters;
     }
 }

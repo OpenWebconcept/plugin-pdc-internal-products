@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Boots the rest API service provider.
  */
@@ -43,17 +44,13 @@ class RestAPIServiceProvider extends ServiceProvider
         register_rest_route($this->namespace, 'items/internal', [
             'methods'             => 'GET',
             'callback'            => [new InternalItemsController($this->plugin), 'getItems'],
-            'permission_callback' => function () {
-                return true;
-            },
+            'permission_callback' => '__return_true',
         ]);
 
         register_rest_route($this->namespace, 'items/(?P<id>\d+)/internal', [
             'methods'             => 'GET',
             'callback'            => [new InternalItemsController($this->plugin), 'getItem'],
-            'permission_callback' => function () {
-                return true;
-            },
+            'permission_callback' => '__return_true',
         ]);
     }
 }
