@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 2.0.3
+
+### Feat
+
+-   Secure internal items rest routes
+
 ## Version 2.0.2
 
 ### Feat
