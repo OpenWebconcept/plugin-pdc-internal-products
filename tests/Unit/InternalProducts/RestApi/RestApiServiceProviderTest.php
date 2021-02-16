@@ -4,8 +4,6 @@ namespace OWC\PDC\InternalProducts\RestAPI;
 
 use Mockery;
 use OWC\PDC\Base\Foundation\Loader;
-use OWC\PDC\InternalProducts\RestAPI\FilterDefaultItems;
-use OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider;
 use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
 use WP_Mock;
 
@@ -31,7 +29,7 @@ class RestAPIServiceProviderTest extends TestCase
         $plugin->loader = Mockery::mock(Loader::class);
 
         WP_Mock::userFunction('wp_parse_args', [
-            'return' => []
+            'return' => [],
         ]);
         WP_Mock::userFunction('get_option');
 

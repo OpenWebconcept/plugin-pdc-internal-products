@@ -14,7 +14,7 @@ class TermCreator
     /**
      * Taxonomy which will be created if not exist.
      *
-     * @var string $taxonomy
+     * @var string
      */
     private $taxonomy;
 

@@ -12,7 +12,6 @@ use OWC\PDC\Base\Support\Traits\AppendToTaxQuery;
  */
 class FilterDefaultItems
 {
-
     use AppendToTaxQuery;
 
     /**

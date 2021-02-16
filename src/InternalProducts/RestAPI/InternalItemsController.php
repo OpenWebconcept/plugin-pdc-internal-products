@@ -55,7 +55,7 @@ class InternalItemsController extends BaseController
             ->query(apply_filters('owc/pdc/rest-api/items/query/single', []))
             ->find($id);
 
-        if (!$item) {
+        if (! $item) {
             return new \WP_Error('no_item_found', sprintf('Item with ID "%d" not found', $id), [
                 'status' => 404,
             ]);
@@ -74,7 +74,7 @@ class InternalItemsController extends BaseController
             ->query(apply_filters('owc/pdc/rest-api/items/query/single', []))
             ->findBySlug($slug);
 
-        if (!$item) {
+        if (! $item) {
             return new \WP_Error('no_item_found', sprintf('Item with SLUG "%d" not found', $slug), [
                 'status' => 404,
             ]);

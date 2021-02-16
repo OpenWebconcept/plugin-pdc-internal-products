@@ -12,7 +12,6 @@ use OWC\PDC\Base\Foundation\ServiceProvider;
  */
 class TaxonomyServiceProvider extends ServiceProvider
 {
-
     /**
      * Register the service provider.
      */

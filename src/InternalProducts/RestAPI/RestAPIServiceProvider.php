@@ -17,7 +17,7 @@ class RestAPIServiceProvider extends ServiceProvider
     /**
      * Endpoint of the rest API.
      *
-     * @var string $namespace;
+     * @var string;
      */
     private $namespace = 'owc/pdc/v1';
 
@@ -34,6 +34,7 @@ class RestAPIServiceProvider extends ServiceProvider
      * Register routes on the rest API.
      *
      * Get all items, including internal values and internal items.
+     *
      * @link https://{url}/wp-json/owc/pdc/v1/items/internal
      *
      * Get item, including internal values and internal item.

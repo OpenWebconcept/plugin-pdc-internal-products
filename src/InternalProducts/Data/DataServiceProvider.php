@@ -15,7 +15,6 @@ use WP_Post;
  */
 class DataServiceProvider extends ServiceProvider
 {
-
     /**
      * Register the service provider, only when in admin or if accessed via the /internal endpoint.
      */

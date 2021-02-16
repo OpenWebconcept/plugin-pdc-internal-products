@@ -30,10 +30,10 @@ return [
                             'name'    => __('Content', 'pdc-internal-products'),
                             'type'    => 'wysiwyg',
                             'desc'    => __('Use of HTML is allowed', 'pdc-internal-products'),
-                            'options' => array(
+                            'options' => [
                                 'textarea_rows' => 4,
                                 'teeny'         => false,
-                            ),
+                            ],
                         ],
                     ],
                 ],

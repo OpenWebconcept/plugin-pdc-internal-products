@@ -2,12 +2,12 @@
 
 return [
     /**
-             * Service Providers.
-         */
+     * Service Providers.
+     */
     'providers' => [
         /**
-     * Global providers.
-     */
+         * Global providers.
+         */
         OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider::class,
         OWC\PDC\InternalProducts\Taxonomy\TaxonomyServiceProvider::class,
 
@@ -34,10 +34,10 @@ return [
      */
     'dependencies' => [
         [
-            'type' => 'plugin',
-            'label' => 'OpenPDC Base',
+            'type'    => 'plugin',
+            'label'   => 'OpenPDC Base',
             'version' => '3.0.0',
-            'file' => 'pdc-base/pdc-base.php',
+            'file'    => 'pdc-base/pdc-base.php',
         ],
     ],
 ];

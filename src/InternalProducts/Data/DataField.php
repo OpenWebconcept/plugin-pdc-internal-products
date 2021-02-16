@@ -13,7 +13,6 @@ use WP_Post;
  */
 class DataField extends CreatesFields
 {
-
     /**
      * Create the internaldata field for a given post.
      *
@@ -41,7 +40,7 @@ class DataField extends CreatesFields
     private function getData(WP_Post $post): array
     {
         return array_filter(get_post_meta($post->ID, '_owc_pdc_internaldata', true) ?: [], function ($item) {
-            return !empty($item['internaldata_key']) && !empty($item['internaldata_value']);
+            return ! empty($item['internaldata_key']) && ! empty($item['internaldata_value']);
         });
     }
 }

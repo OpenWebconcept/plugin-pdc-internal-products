@@ -19,7 +19,7 @@ use OWC\PDC\InternalProducts\Foundation\Plugin;
 /**
  * If this file is called directly, abort.
  */
-if (!defined('WPINC')) {
+if (! defined('WPINC')) {
     die;
 }
 

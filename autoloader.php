@@ -4,7 +4,6 @@ namespace OWC\PDC\InternalProducts;
 
 class Autoloader
 {
-
     /**
      * Autoloader constructor.
      * PSR autoloader
