@@ -19,35 +19,20 @@ class InternalItemsController extends BaseController
 {
 
     /**
-     * Plugin instance
-     *
      * @var Plugin
      */
     protected $plugin;
 
-    /**
-     * Constructor
-     *
-     * @param Plugin $plugin
-     */
     public function __construct(Plugin $plugin)
     {
         $this->plugin = $plugin;
     }
 
-    /**
-     * Get a list of all internal items.
-     *
-     * @param WP_REST_Request $request
-     *
-     * @return array
-     */
-    public function getItems(WP_REST_Request $request)
+    public function getItems(WP_REST_Request $request): array
     {
-
         $this->addFields();
         $parameters = $this->convertParameters($request->get_params());
-        $items = (new Item())
+        $items      = (new Item())
             ->query([])
             ->query($this->getPaginatorParams($request));
 
@@ -60,16 +45,8 @@ class InternalItemsController extends BaseController
         return $this->addPaginator($posts, $items->getQuery());
     }
 
-    /**
-     * Get a internal item.
-     *
-     * @param WP_REST_Request $request
-     *
-     * @return array
-     */
-    public function getItem(WP_REST_Request $request)
+    public function getItem(WP_REST_Request $request): array
     {
-
         $this->addFields();
 
         $id = (int) $request->get_param('id');
@@ -87,21 +64,35 @@ class InternalItemsController extends BaseController
         return $item;
     }
 
+    public function getItemBySlug(WP_REST_Request $request): array
+    {
+        $this->addFields();
+            
+        $slug = $request->get_param('slug');
+
+        $item = (new Item)
+            ->query(apply_filters('owc/pdc/rest-api/items/query/single', []))
+            ->findBySlug($slug);
+
+        if (!$item) {
+            return new \WP_Error('no_item_found', sprintf('Item with SLUG "%d" not found', $slug), [
+                'status' => 404,
+            ]);
+        }
+
+        return $item;
+    }
+
     /**
      * Register the DataServiceProvider.
-     *
-     * @return void
      */
-    protected function addFields()
+    protected function addFields(): void
     {
         (new DataServiceProvider($this->plugin))->register();
     }
 
     /**
      * Convert the parameters to the allowed ones.
-     *
-     * @param array $parametersFromRequest
-     * @return array
      */
     protected function convertParameters(array $parametersFromRequest): array
     {

@@ -52,5 +52,11 @@ class RestAPIServiceProvider extends ServiceProvider
             'callback'            => [new InternalItemsController($this->plugin), 'getItem'],
             'permission_callback' => '__return_true',
         ]);
+
+        register_rest_route($this->namespace, 'items/(?P<slug>[\w-]+)/internal', [
+            'methods'             => 'GET',
+            'callback'            => [new InternalItemsController($this->plugin), 'getItemBySlug'],
+            'permission_callback' => '__return_true',
+        ]);
     }
 }
