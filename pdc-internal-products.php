@@ -4,9 +4,9 @@
  * Plugin Name:       PDC Internal Products
  * Plugin URI:        https://www.openwebconcept.nl/
  * Description:       Splits all of the PDC items in two distinct types: internal and/or external products.
- * Version:           2.0.2
- * Author:            Yard Internet
- * Author URI:        https://www.yardinternet.nl/
+ * Version:           2.0.3
+ * Author:            Yard Digital Agency
+ * Author URI:        https://www.yard.nl/
  * License:           GPL-3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       pdc-internal-products
@@ -37,5 +37,5 @@ $autoloader = new Autoloader();
  * and wp_loaded action hooks.
  */
 add_action('plugins_loaded', function () {
-    $plugin = (new Plugin(__DIR__))->boot();
+    (new Plugin(__DIR__))->boot();
 }, 11);

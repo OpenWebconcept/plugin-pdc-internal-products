@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Version 2.0.3
+
+### Feat
+
+- Support items by slug
+- Fix test
+- Format with php-cs-fixer
+- Remove unused files
+
 ## Version 2.0.2
 
 ### Feat
