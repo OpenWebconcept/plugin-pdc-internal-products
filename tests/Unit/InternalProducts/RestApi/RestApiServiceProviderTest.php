@@ -2,10 +2,8 @@
 
 namespace OWC\PDC\InternalProducts\RestAPI;
 
-use Mockery as m;
-use OWC\PDC\Base\Foundation\Config;
+use Mockery;
 use OWC\PDC\Base\Foundation\Loader;
-use OWC\PDC\Base\Foundation\Plugin;
 use OWC\PDC\InternalProducts\RestAPI\FilterDefaultItems;
 use OWC\PDC\InternalProducts\RestAPI\RestAPIServiceProvider;
 use OWC\PDC\InternalProducts\Tests\Unit\TestCase;
@@ -13,13 +11,12 @@ use WP_Mock;
 
 class RestAPIServiceProviderTest extends TestCase
 {
-
-    public function setUp()
+    public function setUp(): void
     {
         WP_Mock::setUp();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         WP_Mock::tearDown();
     }
@@ -27,11 +24,16 @@ class RestAPIServiceProviderTest extends TestCase
     /** @test */
     public function check_registration_of_restapi()
     {
-        $config = m::mock(Config::class);
-        $plugin = m::mock(Plugin::class);
+        $config = Mockery::mock('OWC\PDC\Base\Foundation\Config');
+        $plugin = Mockery::mock('OWC\PDC\Base\Foundation\Plugin');
 
         $plugin->config = $config;
-        $plugin->loader = m::mock(Loader::class);
+        $plugin->loader = Mockery::mock(Loader::class);
+
+        WP_Mock::userFunction('wp_parse_args', [
+            'return' => []
+        ]);
+        WP_Mock::userFunction('get_option');
 
         $service = new RestAPIServiceProvider($plugin);
 
@@ -41,11 +43,8 @@ class RestAPIServiceProviderTest extends TestCase
             'registerRoutes',
         ])->once();
 
-        $filterDefaultItems = m::mock(FilterDefaultItems::class);
-
         $plugin->loader->shouldReceive('addFilter')
             ->withArgs(function ($hook, $instance, $method, $priority, $arguments) {
-
                 $this->assertInstanceOf(FilterDefaultItems::class, $instance);
 
                 $this->assertEquals('owc/pdc/rest-api/items/query', $hook);
