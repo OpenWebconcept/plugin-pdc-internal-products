@@ -1,13 +1,23 @@
 # CHANGELOG
 
+## Version 2.0.4
+
+### Fixes
+
+-   Uncaught TypeError in InternalItemsController
+
+### Refactor
+
+-   WP_Error message in api
+
 ## Version 2.0.3
 
 ### Feat
 
-- Support items by slug
-- Fix test
-- Format with php-cs-fixer
-- Remove unused files
+-   Support items by slug
+-   Fix test
+-   Format with php-cs-fixer
+-   Remove unused files
 
 ## Version 2.0.2
 

@@ -45,7 +45,10 @@ class InternalItemsController extends BaseController
         return $this->addPaginator($posts, $items->getQuery());
     }
 
-    public function getItem(WP_REST_Request $request): array
+    /**
+     * @return array|WP_Error
+     */
+    public function getItem(WP_REST_Request $request)
     {
         $this->addFields();
 
@@ -55,8 +58,8 @@ class InternalItemsController extends BaseController
             ->query(apply_filters('owc/pdc/rest-api/items/query/single', []))
             ->find($id);
 
-        if (! $item) {
-            return new \WP_Error('no_item_found', sprintf('Item with ID "%d" not found', $id), [
+        if (!$item) {
+            return new \WP_Error('no_item_found', sprintf("Item with ID '%d' not found", $id), [
                 'status' => 404,
             ]);
         }
@@ -64,18 +67,21 @@ class InternalItemsController extends BaseController
         return $item;
     }
 
-    public function getItemBySlug(WP_REST_Request $request): array
+    /**
+     * @return array|WP_Error
+     */
+    public function getItemBySlug(WP_REST_Request $request)
     {
         $this->addFields();
-            
+
         $slug = $request->get_param('slug');
 
         $item = (new Item)
             ->query(apply_filters('owc/pdc/rest-api/items/query/single', []))
             ->findBySlug($slug);
 
-        if (! $item) {
-            return new \WP_Error('no_item_found', sprintf('Item with SLUG "%d" not found', $slug), [
+        if (!$item) {
+            return new \WP_Error('no_item_found', sprintf("Item with SLUG '%s' not found", $slug), [
                 'status' => 404,
             ]);
         }

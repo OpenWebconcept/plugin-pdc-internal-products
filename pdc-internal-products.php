@@ -4,8 +4,8 @@
  * Plugin Name:       PDC Internal Products
  * Plugin URI:        https://www.openwebconcept.nl/
  * Description:       Splits all of the PDC items in two distinct types: internal and/or external products.
- * Version:           2.0.3
- * Author:            Yard Digital Agency
+ * Version:           2.0.4
+ * Author:            Yard | Digital Agency
  * Author URI:        https://www.yard.nl/
  * License:           GPL-3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
@@ -19,7 +19,7 @@ use OWC\PDC\InternalProducts\Foundation\Plugin;
 /**
  * If this file is called directly, abort.
  */
-if (! defined('WPINC')) {
+if (!defined('WPINC')) {
     die;
 }
 
