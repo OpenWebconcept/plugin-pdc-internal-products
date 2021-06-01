@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version 3.0.0
+
+### Feat
+
+- Internal items need authorization
+- Additional parameter allows excluding external items
+
 ## Version 2.0.4
 
 ### Fixes
