@@ -10,7 +10,8 @@ An additional data field for Internal Data is added in the admin for all PDC ite
 
 This plugin chages the behaviour of the existing `owc/pdc/v1/items` endpoint in that it returns *external* items only.
 
-All *internal* items can be accessed on the `owc/pdc/v1/items/internal` endpoint.
+All *internal* and *external* items can be accessed on the `owc/pdc/v1/items/internal` endpoint.
+In order to receive *internal* items only, the additional `filter=external` parameter can be used as in `/owc/pdc/v1/items/internal?filter=external`.
 
 Individual *internal* items can be accessed either on the `owc/pdc/v1/items/{slug}/internal` or `owc/pdc/v1/items/{id}/internal` endpoint. This endpoint will return the content of the Internal Data field under the key `[internal-data]`.
 

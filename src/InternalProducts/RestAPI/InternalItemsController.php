@@ -33,11 +33,14 @@ class InternalItemsController extends BaseController
         $this->addFields();
         $parameters = $this->convertParameters($request->get_params());
         $items      = (new Item())
-            ->query([])
             ->query($this->getPaginatorParams($request));
 
         if (false === $parameters['include-connected']) {
             $items->hide(['connected']);
+        }
+
+        if ('external' === $parameters['exclude']) {
+            $items->query($this->internalTypeOnlyTaxonomyParams());
         }
 
         $posts = $items->all();
@@ -120,6 +123,25 @@ class InternalItemsController extends BaseController
             unset($parametersFromRequest['slug']);
         }
 
+        if (isset($parametersFromRequest['exclude'])) {
+            $parameters['exclude'] = esc_attr($parametersFromRequest['exclude']);
+            unset($parametersFromRequest['exclude']);
+        }
+
         return $parameters;
+    }
+
+    private function internalTypeOnlyTaxonomyParams()
+    {
+        return [
+            'tax_query' => [
+                'relation'  => 'AND',
+                [
+                    'taxonomy' => 'pdc-type',
+                    'field'    => 'slug',
+                    'terms'    => 'internal',
+                ]
+            ],
+        ];
     }
 }
