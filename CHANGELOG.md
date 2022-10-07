@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 3.0.1
+
+### Chore
+
+-   Update dependencies + reference pdc-base plugin from BitBucket to GitHub
+
 ## Version 3.0.0
 
 ### Feat
