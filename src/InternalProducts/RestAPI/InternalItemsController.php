@@ -17,11 +17,10 @@ use WP_REST_Request;
  */
 class InternalItemsController extends BaseController
 {
-
     /**
-     * @var Plugin
+     * Instance of the plugin.
      */
-    protected $plugin;
+    protected Plugin $plugin;
 
     public function __construct(Plugin $plugin)
     {

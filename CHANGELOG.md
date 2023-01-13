@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 3.0.3
+
+### Fix
+
+-   Incompatibility issue with extending class BaseController 
+
 ## Version 3.0.2
 
 ### Chore
