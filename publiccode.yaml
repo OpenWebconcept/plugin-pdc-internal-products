@@ -1,0 +1,31 @@
+name: "plugin-pdc-internal-products"
+
+applicationSuite:
+  name: "OpenWebconcept"
+
+publiccodeYmlVersion: 1.0
+url: "https://github.com/OpenWebconcept/plugin-pdc-internal-products"
+
+platforms:
+  - "web"
+
+categories:
+  - "application-development"
+
+softwareType: "softwareAddon"
+
+description:
+  localisedName: "plugin-pdc-internal-products"
+  shortDescription: "Deze plugin zorgt ervoor dat je bij een PDC-item interne data (onderwaterschermen) kan toevoegen, die alleen voor intern gebruik zchtbaar is"
+  longDescription: "Deze plugin zorgt ervoor dat je bij een PDC-item interne data (onderwaterschermen) kan toevoegen, die alleen voor intern gebruik zchtbaar is"
+
+nl:
+  commonground:
+    layerType: "service"
+
+dependsOn:
+  open:
+    - name: "pdc-base"
+    - versionMin: 3.4.7
+    - name: "WordPress"
+    - versionMin: 6.0.3
