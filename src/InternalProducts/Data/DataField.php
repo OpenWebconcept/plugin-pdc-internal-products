@@ -14,6 +14,11 @@ use WP_Post;
 class DataField extends CreatesFields
 {
     /**
+     * Filter which allows adding to, or changing of, the internal data.
+     */
+    const INTERNAL_DATA_FILTER = 'owc/pdc/internal-products/internal-data';
+
+    /**
      * Create the internaldata field for a given post.
      *
      * @param WP_Post $post
@@ -22,12 +27,16 @@ class DataField extends CreatesFields
      */
     public function create(WP_Post $post): array
     {
-        return array_map(function ($item) {
+        $internalData = array_map(function ($item) {
             return [
                 'title'   => $item['internaldata_key'],
                 'content' => apply_filters('the_content', $item['internaldata_value']),
             ];
         }, $this->getData($post));
+
+        $internalData = apply_filters(self::INTERNAL_DATA_FILTER, $internalData, $post);
+
+        return is_array($internalData) ? $internalData : [];
     }
 
     /**
