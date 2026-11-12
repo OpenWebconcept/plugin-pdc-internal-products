@@ -42,28 +42,33 @@ class RestAPIServiceProvider extends ServiceProvider
      */
     public function registerRoutes()
     {
+        $controller = new InternalItemsController($this->plugin);
+
         register_rest_route($this->namespace, 'items/internal', [
             'methods'             => 'GET',
-            'callback'            => [new InternalItemsController($this->plugin), 'getItems'],
+            'callback'            => [$controller, 'getItems'],
             'permission_callback' => function () {
                 return is_user_logged_in();
             },
+            'args'                => $controller->collectionArguments(),
         ]);
 
         register_rest_route($this->namespace, 'items/(?P<id>\d+)/internal', [
             'methods'             => 'GET',
-            'callback'            => [new InternalItemsController($this->plugin), 'getItem'],
+            'callback'            => [$controller, 'getItem'],
             'permission_callback' => function () {
                 return is_user_logged_in();
             },
+            'args'                => $controller->itemArguments(),
         ]);
 
         register_rest_route($this->namespace, 'items/(?P<slug>[\w-]+)/internal', [
             'methods'             => 'GET',
-            'callback'            => [new InternalItemsController($this->plugin), 'getItemBySlug'],
+            'callback'            => [$controller, 'getItemBySlug'],
             'permission_callback' => function () {
                 return is_user_logged_in();
             },
+            'args'                => $controller->itemBySlugArguments(),
         ]);
     }
 }
