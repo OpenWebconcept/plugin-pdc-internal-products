@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Version 3.2.0
+
+### Feat
+
+-   Declare REST route arguments, so WordPress documents and validates them
+
+### Fix
+
+-   Undefined index warning when the `exclude` parameter is not sent
+
 ## Version 3.0.3
 
 ### Fix
