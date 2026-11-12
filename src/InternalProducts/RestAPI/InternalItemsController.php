@@ -30,15 +30,14 @@ class InternalItemsController extends BaseController
     public function getItems(WP_REST_Request $request): array
     {
         $this->addFields();
-        $parameters = $this->convertParameters($request->get_params());
-        $items      = (new Item())
+        $items = (new Item())
             ->query($this->getPaginatorParams($request));
 
-        if (false === $parameters['include-connected']) {
+        if (null === $request->get_param('include-connected')) {
             $items->hide(['connected']);
         }
 
-        if ('external' === $parameters['exclude']) {
+        if ('external' === $request->get_param('exclude')) {
             $items->query($this->internalTypeOnlyTaxonomyParams());
         }
 
@@ -99,35 +98,51 @@ class InternalItemsController extends BaseController
         (new DataServiceProvider($this->plugin))->register();
     }
 
-    /**
-     * Convert the parameters to the allowed ones.
-     */
-    protected function convertParameters(array $parametersFromRequest): array
+    public function collectionArguments(): array
     {
-        $parameters = [];
+        return [
+            'limit' => [
+                'description' => 'Maximum number of items per page, -1 returns all items.',
+                'type'        => 'integer',
+                'minimum'     => -1,
+                'default'     => 10,
+            ],
+            'page' => [
+                'description' => 'Page of the collection to return.',
+                'type'        => 'integer',
+                'minimum'     => 1,
+                'default'     => 1,
+            ],
+            // Untyped: sites send a bare ?include-connected flag, which a boolean type would reject.
+            'include-connected' => [
+                'description' => 'Include connected items when present.',
+            ],
+            'exclude' => [
+                'description' => 'Set to external to return internal items only.',
+                'type'        => 'string',
+                'enum'        => ['external'],
+            ],
+        ];
+    }
 
-        if (isset($parametersFromRequest['name'])) {
-            $parameters['name'] = esc_attr($parametersFromRequest['name']);
-        }
+    public function itemArguments(): array
+    {
+        return [
+            'id' => [
+                'description' => 'ID of the item.',
+                'type'        => 'integer',
+            ],
+        ];
+    }
 
-        $parameters['include-connected'] = (isset($parametersFromRequest['include-connected'])) ? true : false;
-
-        if (isset($parametersFromRequest['slug'])) {
-            $parameters['name'] = esc_attr($parametersFromRequest['slug']);
-            unset($parametersFromRequest['slug']);
-        }
-
-        if (isset($parametersFromRequest['id'])) {
-            $parameters['p'] = absint($parametersFromRequest['id']);
-            unset($parametersFromRequest['slug']);
-        }
-
-        if (isset($parametersFromRequest['exclude'])) {
-            $parameters['exclude'] = esc_attr($parametersFromRequest['exclude']);
-            unset($parametersFromRequest['exclude']);
-        }
-
-        return $parameters;
+    public function itemBySlugArguments(): array
+    {
+        return [
+            'slug' => [
+                'description' => 'Slug of the item.',
+                'type'        => 'string',
+            ],
+        ];
     }
 
     private function internalTypeOnlyTaxonomyParams()
